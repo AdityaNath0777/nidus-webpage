@@ -264,7 +264,7 @@ h6 {
 
 @media (max-width: 768px) {
   #header {
-    padding: 20px 0;/* take a look later*/
+    padding: 20px 0;
     height: 74px;
   }
 
@@ -273,7 +273,11 @@ h6 {
   }
 
   #header #logo img {
-    max-height: 40px;
+    position: relative;
+    left: -5px;
+    top: -40px;
+    max-height: 100px;
+    max-width: 160px;
   }
 }
 
@@ -546,6 +550,8 @@ h6 {
  /* padding-left: 50px;*/ 
 }
 
+
+
 /* Mobile Nav Toggle */
 #mobile-nav-toggle {
   position: fixed;
@@ -560,6 +566,7 @@ h6 {
   transition: all 0.4s;
   outline: none;
   cursor: pointer;
+  mix-blend-mode: multiply;
 }
 
 #mobile-nav-toggle i {
