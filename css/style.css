@@ -211,26 +211,18 @@ h6 {
 #header {
   
   padding: 10px 0;
-  height: 124px;
+  height: 104px;
   transition: all 0.5s;
   z-index: 507;
-/*background: #ffffff;-->*/
   box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, .56);
   background: url("../img/background.jpg");
   background-position-y: bottom;
-  /*background-color: skyblue;*/
   background-size: cover;
+  list-style-type: none;
 }
-  /*padding: 20px 0;
-  height: 84px;
-  transition: all 0.5s;
-  z-index: 997;
-  background: #fff;
-  box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.06);
-}*/
 
 #header #logo h1 {
-  font-size: 62px;/*42*/
+  font-size: 62px;
   margin: 0;
   padding: 0;
   line-height: 1;
@@ -239,7 +231,7 @@ h6 {
 }
 
 #header #logo h1 a {
-  color:white ;/*#0c2e8a*/
+  color:white ;
   line-height: 1;
   display: inline-block;
 }
@@ -248,24 +240,30 @@ h6 {
   color: #50d8af;
 }
 
-#header #logo img {
+ /* or absolute, depending on your layout needs */
+   /* adjust the top position -36px*/
+   /* adjust the left position before 460px*/
+   
+#header #logo img { 
   display: flex;
   justify-content: center;
-  position: relative; /* or absolute, depending on your layout needs */
-  top: -32px; /* adjust the top position */
-  left: 450px; /* adjust the left position before 70px*/
+  position: relative;
+  top: -5.0vh; 
+  left: 460px ; 
   width: 190px;
   height: 150px;
   margin: 0;
   mix-blend-mode: multiply;
-  /*padding: 0;
-  margin: 0;*/
+  
 }
 
 @media (max-width: 768px) {
   #header {
     padding: 20px 0;
+    width: auto;
     height: 74px;
+    background-size: cover ;
+    list-style-type: none;
   }
 
   #header #logo h1 {
@@ -274,10 +272,10 @@ h6 {
 
   #header #logo img {
     position: relative;
-    left: -5px;
-    top: -40px;
-    max-height: 100px;
-    max-width: 160px;
+    left: -40px;
+    top: -46px;
+    max-height: 120px;
+    max-width: auto;
   }
 }
 
@@ -392,13 +390,12 @@ h6 {
 .nav-menu,
 .nav-menu * {
   position: relative;
-  top: -45px;
+  top: 5px;
   margin-right: 10px;
   padding: 0;
   list-style: none;
- /* margin: 0;
-  padding: 0;
-  list-style: none;*/
+  
+
 }
 
 .nav-menu ul {
@@ -409,11 +406,6 @@ h6 {
   top: 100%;
   left: 100px;
   z-index: 99;
- /* position: absolute;
-  display: none;
-  top: 100%;
-  left: 0;
-  z-index: 99;*/
 }
 
 .nav-menu li {
@@ -430,7 +422,7 @@ h6 {
   background-color: white;
   color: blueviolet;
   display: block;
- /* display: block;*/
+ 
 }
 
 .nav-menu ul ul {
@@ -467,7 +459,6 @@ h6 {
   left: 140px;
   display: flex;
   justify-content: center;
-  /*float: right;*/
   margin: 0;
   z-index: 2000;
   float: right;
@@ -482,21 +473,20 @@ h6 {
 
 /* Nav Meu Styling */
 .nav-menu a {
-  padding: 10px 8px;
+  padding: 10px 15px;
   text-decoration: none;
   display: inline-block;
   color: #555;
   font-family: "Raleway", sans-serif;
   font-weight: 510;
   font-size: 2.8vh;
-  /*outline: none;*/
+  border: 2px solid transparent;
   border-radius: 2rem;
   color: #000000;
 }
 
 .nav-menu li:hover>a,
 .nav-menu>.menu-active>a {
-  /*color: #50d8af;*/
   color: #bb77e8;
   background-color: white;
   border-radius: 2rem;
@@ -535,19 +525,25 @@ h6 {
   margin: 0;
 }
 
-.nav-menu .half-1{
+.nav-menu div{
   display: flex;
-  position: absolute;
-  margin-top: 50px;
-  margin-left: -1100px;
+  position: relative;
+  top: -148px;
+  right: 90px;
+  z-index: 2000;
+  
 }
-.nav-menu .half-2{
-  display: inline-flex;
-  position: absolute;
-  right: 225px;
-  margin-top: 50px;
-  /*margin-right: 100%;*/
- /* padding-left: 50px;*/ 
+.nav-menu div:nth-child(4){
+  padding-left: 170px;
+}
+
+#nav-menu-container img{
+  display: flex;
+  position: relative;
+  width: 190px;
+  height: 150px;
+  top: -45.0vh;
+  left: 460px;
 }
 
 
@@ -567,6 +563,7 @@ h6 {
   outline: none;
   cursor: pointer;
   mix-blend-mode: multiply;
+  mask-image: none;
 }
 
 #mobile-nav-toggle i {
